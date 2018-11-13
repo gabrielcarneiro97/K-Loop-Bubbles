@@ -1,0 +1,187 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  max-height: 360px;
+  margin: 0px;
+  overflow: hidden;
+  font-family: 'Nova Mono', monospace;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+}
+
+#components-main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.el {
+  position: absolute;
+  margin: 0;
+}
+
+#log {
+  top: 10px;
+  left: 0px;
+  width: 360px;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  display: none;
+}
+
+#battery {
+  top: 180px;
+  left: 180px;
+  height: 180px;
+  width: 180px;
+}
+
+#battery-bar {
+  top: 54px;
+  left: 66px;
+  height: 50px;
+  width: 50px;
+}
+
+.progressbar-text {
+  color: white !important;
+  font-size: 12px !important;
+}
+
+#battery-icon {
+  left: 90px;
+  top: 55px;
+  font-size: 6px;
+  color: white;
+}
+
+#relogio {
+  color: white;
+  font-size: 80px;
+  text-align: center;
+  left: 0px;
+  top: 30px;
+  width: 360px;
+  height: 270px;
+}
+
+#relogio .el {
+  position: relative;
+  height: 90px;
+  line-height: 90px;
+  width: 100%;
+}
+
+#data {
+  color: white;
+  right: 0px;
+  width: 180px;
+  height: 60px;
+  top: 60px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#data .el {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+
+#clima {
+  width: 180px;
+  height: 100%;
+  text-align: center;
+}
+
+#temp {
+  position: relative;
+  height: 180px;
+  line-height: 180px;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+#tempo {
+  height: 180px;
+  top: 180px;
+  width: 180px;
+  text-align: center;
+  font-size: 40px;
+}
+
+#tempo i {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+}
+
+#sun-icon {
+  color: #FFFF00;
+}
+
+#moon-icon {
+  color: #9E9E9E;
+  display: none;
+}
+
+#cloud-icon {
+  color: white;
+  font-size: 20px;
+  padding-left: 18px;
+  padding-top: 20px;
+  display: none;
+}
+
+#rain-icon {
+  color: white;
+  font-size: 13px;
+  font-size: 30px;
+  padding-top: 13px;
+  padding-left: 11px;
+  display: none;
+}
+
+#snow-icon {
+  color: white;
+  font-size: 15px;
+  font-size: 35px;
+  padding-top: 5px;
+  padding-left: 10px;
+  display: none;
+}
+
+#loc {
+  width: 360px;
+  height: 40px;
+  top: 310px;
+  color: white;
+  text-align: center;
+}
+
+#loc .el {
+  position: relative;
+}
+
+#loc-name {
+  font-size: 14px;
+}
+
+#coord {
+  font-size: 11px;
+}
