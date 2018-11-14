@@ -98,29 +98,28 @@ html, body {
   text-align: center;
 }
 
-/* COISAS ANTIGAS */
-
-#log {
-  top: 10px;
-  left: 0px;
-  width: 360px;
+#data {
+  left: 52.5px;
+  top: 0;
   text-align: center;
-  color: white;
-  font-size: 10px;
-  display: none;
+  font-size: 25px;
+}
+
+#data .el {
+  position: relative;
+  width: 100%;
+  height: 37.5px;
+  line-height: 37.5px;
 }
 
 #battery {
-  top: 180px;
-  left: 180px;
-  height: 180px;
-  width: 180px;
-  display: none;
+  top: 135px;
+  left: 0px;
 }
 
 #battery-bar {
-  top: 54px;
-  left: 66px;
+  top: 20px;
+  left: 20px;
   height: 50px;
   width: 50px;
 }
@@ -131,27 +130,22 @@ html, body {
 }
 
 #battery-icon {
-  left: 90px;
-  top: 55px;
+  left: 44px;
+  top: 21px;
   font-size: 6px;
   color: white;
 }
 
-#data {
-  color: white;
-  right: 0px;
-  width: 180px;
-  height: 60px;
-  top: 60px;
-  text-align: center;
-  font-size: 20px;
-}
+/* COISAS ANTIGAS */
 
-#data .el {
-  position: relative;
-  width: 100%;
-  height: 30px;
-  line-height: 30px;
+#log {
+  top: 10px;
+  left: 0px;
+  width: 360px;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  display: none;
 }
 
 #clima {
