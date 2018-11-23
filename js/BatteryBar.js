@@ -4,7 +4,7 @@ class BatteryBar {
     this.color = '#2962FF';
 
     this.bar = new ProgressBar.Circle(this.domElement, {
-      strokeWidth: 15,
+      strokeWidth: 1,
       easing: 'easeInOut',
       duration: 1400,
       color: this.color,

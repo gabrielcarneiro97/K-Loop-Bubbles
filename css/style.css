@@ -10,7 +10,7 @@ html, body {
 #container {
   width: 100%;
   height: 100%;
-  color: white;
+  color: grey;
   overflow: hidden;
 }
 
@@ -34,7 +34,12 @@ html, body {
 
 .bubble {
   border-radius: 100px;
+  border: 1px solid grey;
+}
+
+.hora {
   border: 1px solid white;
+  color: white;
 }
 
 #big {
@@ -85,9 +90,12 @@ html, body {
 }
 
 #minuto {
+  height: 70px;
+  width: 70px;
+
   right: 0px;
   top: 52.5px;
-  font-size: 60px;
+  font-size: 55px;
   line-height: 73px;
   text-align: center;
 }
@@ -101,38 +109,39 @@ html, body {
 #data {
   left: 52.5px;
   top: 0;
+  height: 50px;
+  width: 50px;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #data .el {
   position: relative;
   width: 100%;
-  height: 37.5px;
-  line-height: 37.5px;
+  height: 25px;
+  line-height: 25px;
 }
 
 #battery {
+  border: 1px solid black;
   top: 135px;
   left: 0px;
 }
 
 #battery-bar {
-  top: 20px;
-  left: 20px;
-  height: 50px;
-  width: 50px;
+  height: 100%;
+  width: 100%;
 }
 
 .progressbar-text {
   color: white !important;
-  font-size: 12px !important;
+  font-size: 20px !important;
 }
 
 #battery-icon {
-  left: 44px;
+  left: 40px;
   top: 21px;
-  font-size: 6px;
+  font-size: 10px;
   color: white;
 }
 
