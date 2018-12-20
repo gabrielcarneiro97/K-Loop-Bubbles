@@ -1,7 +1,13 @@
 const dom = {
   byId: id => document.getElementById(id),
   byClass: cl => document.getElementsByClassName(cl),
-}
+};
+
+const center = {
+  x: 180,
+  y: 180,
+};
+
 
 function html(el, inner) {
   if (!el) return false;
@@ -51,6 +57,22 @@ function rotateElement(el, angle) {
   } catch (err) {
     return err;
   }
+}
+
+function setCenterPos(pos, obj) {
+  if (!obj.height || !obj.width) {
+    return;
+  } else if (!pos.x || !pos.y) {
+    return;
+  }
+
+  const realPos = {
+    x: pos.x - (obj.width / 2),
+    y: pos.y - (obj.height / 2),
+  };
+
+  obj.x = realPos.x;
+  obj.y = realPos.y;
 }
 
 const openWeatherKey = '67793f8e2edddad949ad82665b43655a';

@@ -1,14 +1,23 @@
-const batteryBar = new BatteryBar('battery-bar');
-const clock = new Clock('hora', 'minuto', 'segundo', 'dia', 'mes');
-const weather = new Weather('sun-icon', 'moon-icon', 'cloud-icon', 'rain-icon', 'snow-icon', 'temp', 'coord', 'loc-name');
+const app = new PIXI.Application(360, 360, { antialias: true, backgroundColor: 0xFFFFFF });
+document.getElementById('components-main').appendChild(app.view);
+
+const graphics = new PIXI.Graphics();
+
+graphics.lineStyle(0);
+graphics.beginFill(0x000000);
+graphics.drawCircle(center.x, center.y, 180);
+graphics.endFill();
+
+app.stage.addChild(graphics);
+
+const clock = new Clock(app);
 
 function everySec() {
-  batteryBar.tic();
   clock.tic();
 }
 
 function everyMin() {
-  weather.update();
+
 }
 
 function bindEvents() {
