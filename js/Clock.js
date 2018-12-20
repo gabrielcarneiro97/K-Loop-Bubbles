@@ -1,18 +1,13 @@
 class Clock {
   constructor(app) {
-    this.fontStyle = new PIXI.TextStyle({
-      fontFamily: 'Roboto',
-      fontSize: 36,
-      fill: '#ffffff',
-    });
+    this.segundo = new BitLine(app, { x: center.x, y: 205 }, 15);
+    this.minuto = new BitLine(app, { x: center.x, y: 160 }, 15);
+    this.hora = new BitLine(app, { x: center.x, y: 115 }, 15);
 
-    this.segundo = new PIXI.Text('00', this.fontStyle);
-    setCenterPos(center, this.segundo);
-    this.minuto = new PIXI.Text('00', this.fontStyle);
-    
-    this.hora = new PIXI.Text('00', this.fontStyle);
+    this.mes = new BitLine(app, { x: 250, y: 285 }, 10, 0x0010CF, 4);
+    this.dia = new BitLine(app, { x: 250, y: 260 }, 10, 0x0010CF, 5);
 
-    app.stage.addChild(this.segundo);
+    this.aod = false;
   }
 
   updateTime() {
@@ -25,7 +20,13 @@ class Clock {
     const dia = datetime.getDate();
     const mes = datetime.getMonth() + 1;
 
-    this.segundo.text = pad(segundo);
+    this.minuto.setNum(minuto);
+    this.hora.setNum(hora);
+
+    this.segundo.setNum(segundo);
+
+    this.mes.setNum(mes, true);
+    this.dia.setNum(dia);
 
   }
 
@@ -35,5 +36,19 @@ class Clock {
       
       resolve();
     });
+  }
+
+  setAod(aod) {
+    this.aod = aod;
+
+    if (aod) {
+      this.segundo.hide();
+      this.mes.hide();
+      this.dia.hide();
+    } else {
+      this.segundo.show();
+      this.mes.show();
+      this.dia.show();
+    }
   }
 }

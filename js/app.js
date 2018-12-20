@@ -12,12 +12,9 @@ app.stage.addChild(graphics);
 
 const clock = new Clock(app);
 
+
 function everySec() {
   clock.tic();
-}
-
-function everyMin() {
-
 }
 
 function bindEvents() {
@@ -31,11 +28,7 @@ function bindEvents() {
 function alwaysOnDisplayController() {
   document.addEventListener('ambientmodechanged', (ev) => {
     const { ambientMode } = ev.detail;
-    if (ambientMode) {
-      aodOn();
-    } else {
-      aodOff();
-    }
+    clock.setAod(ambientMode);
   });
 
   document.addEventListener('timetick', () => {
@@ -47,12 +40,9 @@ window.onload = () => {
   bindEvents();
   alwaysOnDisplayController();
 
+  everySec();
   setInterval(() => {
     everySec();
   }, 1000);
 
-  everyMin();
-  setInterval(() => {
-    everyMin();
-  }, 60000);
 };
